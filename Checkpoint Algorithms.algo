@@ -1,0 +1,38 @@
+ALGORITHM checkpoint algo
+VAR
+s:STRING;
+voy:STRING=['a','e','i','o',u','y'];
+num:INTEGER:=1;
+numbvoy:INTEGER:=0;
+
+
+BEGIN
+REPEAT
+Write(give a sentence);
+Read(s);
+UNTIL (s [STRING.length(s)-1]="." ) 
+
+FOR i FROM 0 TO STRING.length(s)-1 STEP 1  DO 
+IF (s[i]='') THEN
+num:=num+1;
+END_IF 
+END_FOR
+
+FOR i FROM 0 TO STRING.length(s)-1 STEP 1  DO
+FOR j FROM 0 TO STRING.length(voy)-1 STEP 1 DO
+IF (lowercase(s[i])==voy[j]) THEN
+numbvoy:=numbvoy+1;
+END_IF 
+END_FOR
+END_FOR
+write(length of the sentence);
+write(number of words);
+write(number of vowels);
+END
+
+
+
+
+
+
+
